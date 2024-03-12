@@ -1,3 +1,5 @@
+print("JDSLAKFJKASFJLS")
+
 #@markdown **Python Definitions**
 import json
 from IPython import display
@@ -1330,17 +1332,17 @@ def render_interpolation(args, anim_args):
     print(f"Preparing for interpolation of the following...")
 
     for i, prompt in animation_prompts.items():
-      args.prompt = prompt
+        args.prompt = prompt
 
-      # sample the diffusion model
-      results = generate(args, return_c=True)
-      c, image = results[0], results[1]
-      prompts_c_s.append(c) 
-      
-      # display.clear_output(wait=True)
-      display.display(image)
-      
-      args.seed = next_seed(args)
+        # sample the diffusion model
+        results = generate(args, return_c=True)
+        c, image = results[0], results[1]
+        prompts_c_s.append(c) 
+        
+        # display.clear_output(wait=True)
+        display.display(image)
+        
+        args.seed = next_seed(args)
 
     display.clear_output(wait=True)
     print(f"Interpolation start...")
