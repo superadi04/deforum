@@ -1,4 +1,16 @@
-print("JDSLAKFJKASFJLS")
+import os
+
+# Determine the absolute path of the current script
+script_path = os.path.abspath(__file__)
+
+# Find the directory of the current script
+script_dir = os.path.dirname(script_path)
+
+# Find the parent directory of the script's directory
+parent_dir = os.path.dirname(script_dir)
+
+# Change the current working directory to the parent directory
+os.chdir(parent_dir)
 
 #@markdown **Python Definitions**
 import json
